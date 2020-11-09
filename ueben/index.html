@@ -2,7 +2,7 @@
 <html ng-app="myFirstApp" lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <script src="angular.min.js"></script>
+  <script src="./../angular.min.js"></script>
   <script src="app.js"></script>
   <title>My first AngularJS App</title>
 </head>
@@ -13,5 +13,11 @@
     <div>{{sayHello()}}</div>
   </div>
   <h5>Unterhalb vom DIV</h5>
+
+  <div ng-controller="NameCalculatorController"
+      ng-keyup="recalcTotalValue();">
+    <input type="text" ng-model="name"></input>
+    <div>Total Value: {{totalValue}}</div>
+  </div>
 </body>
 </html>
